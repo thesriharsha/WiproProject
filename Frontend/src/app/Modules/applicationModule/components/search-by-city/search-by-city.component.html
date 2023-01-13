@@ -1,0 +1,57 @@
+<section class="vh-100 gradient-custom">
+    <form class="form-inline" [formGroup]="myform" (ngSubmit)="fetchData()">
+
+        <div class="form-group mx-sm-3 mb-2">
+
+            <input type="text" class="form-control" id="inputcity" placeholder="City" formControlName="cityName">
+        </div>
+
+        <div class="form-group mx-sm-3 mb-2">
+
+            <input type="text" class="form-control" id="stateId" placeholder="State" formControlName="stateName">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+
+            <input type="text" class="form-control" id="stateId" placeholder="Country" formControlName="countryName">
+        </div>
+        <div class="buttonList">
+            <button type="submit" class="searchbutton btn btn-primary mb-2">search</button>
+            <button type="" class="submitbutton btn btn-primary mb-2" *ngIf="isClicked" (click)="addtofav()">Add to
+                Watch List</button>
+        </div>
+    </form>
+        <div class="container"  *ngIf="city">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h2>
+                                City name : {{city.city}}
+
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    Country- {{city.country}}, State- {{city.state}}, <div>COORD- {{city.location?.coordinates}}</div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h4 class="display-1 text-primary">
+                                        Air Quality Index: {{city.pollution?.aqius}}
+                                    </h4>
+                                    <p>
+                                        Weather report- Temperature: {{city.weather?.temperature}}&#8451;,  Pressure:
+                                        {{city.weather?.pressure}}mB,  Humidity: {{city.weather?.humidity}},  Wind
+                                        speed: {{city.weather?.wind}}
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</section>

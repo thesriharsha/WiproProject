@@ -1,0 +1,22 @@
+.mb-0{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.form-label{
+    padding-top: 10px;
+    
+}
+.container {
+border: 0;   
+
+}
+body{
+    color: black;
+}
+.card{
+    opacity: .9;
+    
+}
+.card-body{
+    opacity: 1;
+}

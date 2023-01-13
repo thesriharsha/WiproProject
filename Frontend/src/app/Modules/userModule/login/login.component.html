@@ -1,0 +1,38 @@
+
+  <div class="container py-3 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <h2 class="text-uppercase text-center mb-3">Login</h2>
+
+            <form [formGroup]="formGroup" (ngSubmit)="islogin()">
+            
+             
+              <h4 class="text-white-50 mb-5">Please enter your login and password!</h4>
+               
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="typeEmailX" class="form-control form-control-lg"  formControlName="username" />
+                <label class="form-label" for="typeEmailX">Email</label>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" formControlName="password" />
+                <label class="form-label" for="typePasswordX">Password</label>
+              </div>
+
+              <button class="btn btn-outline-light btn-lg px-4" type="submit">Sign in</button>
+              <p class="mb-0">Don't have an account? </p>
+                  <button (click)="register()" class="btn btn-outline-light btn-lg px-4">Sign Up</button>
+            
+            </form>
+              
+                
+              
+            
+              
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

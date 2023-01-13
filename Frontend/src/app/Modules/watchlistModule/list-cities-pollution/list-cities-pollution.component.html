@@ -1,0 +1,42 @@
+<section id="main" class="vh-100 gradient-custom">
+  <section class="p-3" *ngFor="let city of wishList" >
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h2>
+                            City name : {{city.city}}
+
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                Country- {{city.country}}, State- {{city.state}}, <div>COORD- {{city.location?.coordinates}}</div>
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="display-1 text-primary">
+                                    Air Quality Index: {{city.pollution?.aqius}}
+                                </h4>
+                                <p>
+                                    Weather report- Temperature: {{city.weather?.temperature}}&#8451;,  Pressure:
+                                    {{city.weather?.pressure}}mB,  Humidity: {{city.weather?.humidity}},  Wind
+                                    speed: {{city.weather?.wind}}
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="d-flex">
+                        <button class="btn btn-danger" (click)="remove(city)">Remove from favourite list</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+ 

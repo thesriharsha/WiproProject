@@ -1,0 +1,44 @@
+server:
+  port: 8580
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/userdb
+    username: root
+    password: Die203
+
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: create
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  cloud:
+    gateway:
+
+      default-filters:
+          - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+          corsConfigurations:
+            '[/**]':
+              #allowCredentials: true
+              allowedOrigins: "http://localhost:4200"
+              allowedHeaders: "*"
+              allowedMethods:
+                - GET
+                - POST
+                - PUT
+                - OPTIONS
+                - DELETE
+
+      routes:
+        - id: service_wishlist
+          uri: http://localhost:8585
+          predicates:
+            - Path=/wishlist/**
+          filters:
+            - AuthenticateFilterFactory

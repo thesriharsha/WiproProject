@@ -1,0 +1,41 @@
+
+    <div class="container py-3 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+              <h2 class="text-uppercase text-center mb-4">Create an account</h2>
+
+              <form [formGroup]="myform" (ngSubmit)="register()">
+
+                <h4 class="text-white-50 mb-5" >Enter your details to Register
+                </h4>
+
+                <div class="form-outline mb-3">
+                  <input type="text" id="form2Example17"
+                    class="form-control form-control-lg" formControlName="username" />
+                  <label class="form-label" for="form2Example17">User Name</label>
+                </div>
+                                  
+                <div class="form-outline mb-3">
+                  <input type="password" id="form2Example27"
+                    class="form-control form-control-lg" formControlName="password" />
+                  <label class="form-label" for="form2Example27">Password</label>
+                </div>
+
+                <div class="pt-1 mb-4">
+                  <button  class="btn btn-outline-light btn-lg px-4" type="submit">Sign up</button>
+                </div>
+
+
+                <p class="mb-5 pb-lg-2">Already have an account?
+                   <a routerLink="/login">Sign in here</a></p>
+
+              </form>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+

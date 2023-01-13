@@ -1,0 +1,50 @@
+/*.gradient-custom {
+    /* fallback for old browsers 
+    background: #6a11cb;
+
+    /* Chrome 10-25, Safari 5.1-6 
+    background: -webkit-linear-gradient(to right, rgb(203, 91, 17), rgba(37, 117, 252, 1));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+    background: linear-gradient(to right, rgb(203, 91, 17), rgba(37, 117, 252, 1))
+}*/
+
+
+.form-inline {
+    display: flex;
+
+    justify-content: center
+}
+
+.form-inline div {
+
+    margin-top: 2%;
+
+}
+
+.form-inline button {
+
+    margin-top: 2%;
+
+}
+
+  .content-module {
+    margin-bottom: 16px;
+    justify-content: center
+  }
+  .current-weather-details{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 5px;
+  
+  }
+  .current-weather-details :right{
+      position: relative;
+  }
+  .container{
+    margin-top: 50px;
+    
+  }
+  .submitbutton{
+      margin-left: 50px;
+  }
